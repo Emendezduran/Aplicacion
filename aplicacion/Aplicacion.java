@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package aplicacion;
 
 /**
@@ -11,11 +6,16 @@ package aplicacion;
  */
 public class Aplicacion {
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-       
+      public static void main(String[] args) {
+
+        Cpu processor = new Cpu(4, 8);
+        Raton mouse = new Raton(true, "QWERTY1");
+        Teclado keyboard = new Teclado(101);
+        Monitor screen = new Monitor("AOC", 16);
+        Ordenador computer1 = new Ordenador(processor, mouse, keyboard, screen);
+        computer1.visualizarOrdenador();
+        System.out.println("PRECIO: {" + computer1.calcularPrecio() + " €}");
+        
+        
     }
-    
 }
